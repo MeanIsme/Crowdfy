@@ -19,7 +19,7 @@ export const MapLayout = React.memo(function MapLayout({ campaign, isFavorite, o
 
   return (
     <article className="group relative flex overflow-hidden rounded-sm border border-border bg-card shadow-sm transition hover:shadow-md">
-      {/* Left: Image Section */}
+      {/* Image Section */}
       <div className="relative aspect-[200/186] w-32 shrink-0 overflow-hidden md:w-40">
         <Image
           src={campaign.image}
@@ -29,7 +29,7 @@ export const MapLayout = React.memo(function MapLayout({ campaign, isFavorite, o
         <TypeBadge campaign={campaign} showVerified variant="compact" />
       </div>
 
-      {/* Right: Content Section (2/3 width) */}
+      {/* Content Section */}
       <div className="relative flex flex-1 flex-col gap-3 p-4">
         <FavoriteButton isFavorite={isFavorite} onToggle={onToggleFavorite} variant="ghost" />
 
@@ -47,7 +47,7 @@ export const MapLayout = React.memo(function MapLayout({ campaign, isFavorite, o
           <span>{campaign.location}</span>
         </div>
 
-        {/* Amount Raised - Right aligned */}
+        {/* Amount Raised */}
         <div className="mt-auto flex items-center justify-between">
           <div className="text-sm text-muted-foreground">
             <span className="font-bold text-foreground">{formatAmount(campaign.amountRaised, currency)}</span> euros

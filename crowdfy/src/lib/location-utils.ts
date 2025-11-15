@@ -1,6 +1,3 @@
-// Helper to convert location strings to coordinates
-// In a real app, you would use Google Geocoding API
-
 const locationCoordinates: Record<string, { lat: number; lng: number }> = {
   'Saint Martin': { lat: 18.0708, lng: -63.0501 },
   'Spain': { lat: 40.4637, lng: -3.7492 },

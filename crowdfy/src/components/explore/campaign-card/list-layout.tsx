@@ -26,7 +26,7 @@ export const ListLayout = React.memo(function ListLayout({ campaign, isFavorite,
           alt={campaign.title}
           className="h-full w-full rounded-l-sm object-cover object-center"
         />
-        {/* Verified Badge - Bottom Left */}
+        {/* Verified Badge */}
         {campaign.creator.verified && (
           <Badge
             variant="outline"
@@ -40,7 +40,7 @@ export const ListLayout = React.memo(function ListLayout({ campaign, isFavorite,
 
       {/* Right: Content Section */}
       <div className="relative flex flex-1 flex-col gap-1 p-4">
-        {/* Favorite Button - Top Right */}
+        {/* Favorite Button */}
         <Button
           variant="ghost"
           size="icon"

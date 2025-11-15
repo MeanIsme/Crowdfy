@@ -32,7 +32,7 @@ export const GalleryLayout = React.memo(function GalleryLayout({ campaign, layou
           alt={campaign.title}
           className="h-full w-full transition duration-500 group-hover:scale-105"
         />
-        {/* Share and Favorite Buttons - Bottom Right */}
+        {/* Share and Favorite Buttons */}
         <div className="absolute bottom-3 right-3 flex gap-2">
           <Button
             variant="ghost"
@@ -40,7 +40,6 @@ export const GalleryLayout = React.memo(function GalleryLayout({ campaign, layou
             className="h-9 w-9 rounded-sm bg-white/90 text-foreground shadow-sm hover:bg-white"
             onClick={(e) => {
               e.stopPropagation()
-              // TODO: Implement share functionality
             }}
           >
             <Upload className="h-4 w-4" />

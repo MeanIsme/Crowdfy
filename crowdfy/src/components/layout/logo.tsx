@@ -34,11 +34,8 @@ export function Logo({ size = 'md', showText = true, className }: LogoProps) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Thanh trên cùng - dài nhất */}
           <rect x="4" y="6" width="16" height="2" rx="1" fill="currentColor" />
-          {/* Thanh thứ 2 - bằng 1 nửa thanh trên cùng */}
           <rect x="8" y="11" width="8" height="2" rx="1" fill="currentColor" />
-          {/* Thanh cuối - dấu chấm căn giữa */}
           <circle cx="12" cy="17" r="1.5" fill="currentColor" />
         </svg>
       </div>

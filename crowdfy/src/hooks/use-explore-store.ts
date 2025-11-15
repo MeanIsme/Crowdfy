@@ -1,9 +1,5 @@
 import { useExploreStore as useBaseExploreStore } from '@/store/explore-store'
 
-/**
- * Optimized hook to get multiple store values at once
- * Reduces re-renders by selecting all needed values in one call
- */
 export function useExploreStore() {
   return useBaseExploreStore((state) => ({
     type: state.type,
