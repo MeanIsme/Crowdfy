@@ -1,3 +1,4 @@
+import React from 'react'
 import { Progress } from '@/components/ui/progress'
 import { cn } from '@/lib/utils'
 import { formatAmount } from '@/lib/campaign-formatters'
@@ -9,7 +10,7 @@ interface CampaignProgressProps {
   layout?: 'gallery' | 'list'
 }
 
-export function CampaignProgress({ campaign, percentage, layout }: CampaignProgressProps) {
+export const CampaignProgress = React.memo(function CampaignProgress({ campaign, percentage, layout }: CampaignProgressProps) {
   const isListLayout = layout === 'list'
   const currency = campaign.currency ?? '$'
 
@@ -24,5 +25,5 @@ export function CampaignProgress({ campaign, percentage, layout }: CampaignProgr
       </div>
     </div>
   )
-}
+})
 

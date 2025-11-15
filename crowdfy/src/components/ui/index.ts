@@ -15,6 +15,7 @@ export {
   DialogTitle,
   DialogTrigger,
 } from './dialog'
+export { Image } from './image'
 export { Input } from './input'
 export {
   Pagination,

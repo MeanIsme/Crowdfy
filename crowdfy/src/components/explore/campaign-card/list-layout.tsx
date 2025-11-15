@@ -1,6 +1,8 @@
+import React from 'react'
 import { MapPin, BadgeCheck } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Image } from '@/components/ui/image'
 import { Heart } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { calculatePercentage, getCampaignTypeLabel, formatAmount } from '@/lib/campaign-formatters'
@@ -12,18 +14,17 @@ interface ListLayoutProps {
   onToggleFavorite: () => void
 }
 
-export function ListLayout({ campaign, isFavorite, onToggleFavorite }: ListLayoutProps) {
+export const ListLayout = React.memo(function ListLayout({ campaign, isFavorite, onToggleFavorite }: ListLayoutProps) {
   const percentage = calculatePercentage(campaign)
 
   return (
     <article className="group relative flex overflow-hidden rounded-sm border border-foreground/20 bg-card shadow-sm transition hover:shadow-md">
       {/* Left: Image Section */}
       <div className="relative m-4 aspect-[200/186] w-32 shrink-0 overflow-hidden rounded-sm md:w-40">
-        <img
+        <Image
           src={campaign.image}
           alt={campaign.title}
           className="h-full w-full rounded-l-sm object-cover object-center"
-          loading="lazy"
         />
         {/* Verified Badge - Bottom Left */}
         {campaign.creator.verified && (
@@ -89,5 +90,5 @@ export function ListLayout({ campaign, isFavorite, onToggleFavorite }: ListLayou
       </div>
     </article>
   )
-}
+})
 

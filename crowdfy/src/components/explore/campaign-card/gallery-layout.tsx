@@ -1,6 +1,8 @@
+import React from 'react'
 import { Heart, Upload, Gift } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Image } from '@/components/ui/image'
 import { calculatePercentage, formatAmount } from '@/lib/campaign-formatters'
 import type { Campaign } from '@/data/campaigns'
 import { cn } from '@/lib/utils'
@@ -12,7 +14,7 @@ interface GalleryLayoutProps {
   onToggleFavorite: () => void
 }
 
-export function GalleryLayout({ campaign, layout, isFavorite, onToggleFavorite }: GalleryLayoutProps) {
+export const GalleryLayout = React.memo(function GalleryLayout({ campaign, layout, isFavorite, onToggleFavorite }: GalleryLayoutProps) {
   const percentage = calculatePercentage(campaign)
   const isListLayout = layout === 'list'
 
@@ -25,11 +27,10 @@ export function GalleryLayout({ campaign, layout, isFavorite, onToggleFavorite }
     >
       {/* Image Section */}
       <div className="relative w-full aspect-[396/175] overflow-hidden">
-        <img
+        <Image
           src={campaign.image}
           alt={campaign.title}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          loading="lazy"
+          className="h-full w-full transition duration-500 group-hover:scale-105"
         />
         {/* Share and Favorite Buttons - Bottom Right */}
         <div className="absolute bottom-3 right-3 flex gap-2">
@@ -104,5 +105,5 @@ export function GalleryLayout({ campaign, layout, isFavorite, onToggleFavorite }
       </div>
     </article>
   )
-}
+})
 

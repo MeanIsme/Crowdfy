@@ -1,5 +1,7 @@
+import React from 'react'
 import { MapPin } from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
+import { Image } from '@/components/ui/image'
 import { FavoriteButton } from './favorite-button'
 import { TypeBadge } from './type-badge'
 import { formatAmount, calculatePercentage } from '@/lib/campaign-formatters'
@@ -11,7 +13,7 @@ interface MapLayoutProps {
   onToggleFavorite: () => void
 }
 
-export function MapLayout({ campaign, isFavorite, onToggleFavorite }: MapLayoutProps) {
+export const MapLayout = React.memo(function MapLayout({ campaign, isFavorite, onToggleFavorite }: MapLayoutProps) {
   const percentage = calculatePercentage(campaign)
   const currency = campaign.currency ?? '$'
 
@@ -19,11 +21,10 @@ export function MapLayout({ campaign, isFavorite, onToggleFavorite }: MapLayoutP
     <article className="group relative flex overflow-hidden rounded-sm border border-border bg-card shadow-sm transition hover:shadow-md">
       {/* Left: Image Section */}
       <div className="relative aspect-[200/186] w-32 shrink-0 overflow-hidden md:w-40">
-        <img
+        <Image
           src={campaign.image}
           alt={campaign.title}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          loading="lazy"
+          className="h-full w-full transition duration-500 group-hover:scale-105"
         />
         <TypeBadge campaign={campaign} showVerified variant="compact" />
       </div>
@@ -58,5 +59,5 @@ export function MapLayout({ campaign, isFavorite, onToggleFavorite }: MapLayoutP
       </div>
     </article>
   )
-}
+})
 
