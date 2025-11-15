@@ -19,7 +19,7 @@ export function GalleryLayout({ campaign, layout, isFavorite, onToggleFavorite }
   return (
     <article
       className={cn(
-        'group relative flex flex-col rounded-sm overflow-hidden rounded-sm border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-card',
+        'group relative flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-card',
         isListLayout && 'md:flex-row',
       )}
     >
