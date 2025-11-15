@@ -22,7 +22,7 @@ export function AdvancedFiltersDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="h-[2.5rem] rounded-sm bg-primary text-primary-foreground hover:bg-primary/90">
+        <Button className="h-[2.5rem] rounded-sm bg-lime-500 text-white hover:bg-lime-600">
           <Logo size="sm" showText={false} className="mr-2 text-white" />
           Show filters
         </Button>

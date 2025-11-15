@@ -25,7 +25,7 @@ export function Logo({ size = 'md', showText = true, className }: LogoProps) {
   return (
     <div className={`flex items-center gap-2 ${className || ''}`}>
       <div
-        className={`flex ${iconSize} items-center justify-center ${hasWhiteColor ? 'text-white' : 'text-green-500'}`}
+        className={`flex ${iconSize} items-center justify-center ${hasWhiteColor ? 'text-white' : 'text-lime-500'}`}
         aria-hidden="true"
       >
         <svg

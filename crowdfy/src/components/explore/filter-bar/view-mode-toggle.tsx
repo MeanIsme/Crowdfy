@@ -29,7 +29,7 @@ export function ViewModeToggle() {
               className={cn(
                 'h-auto min-h-[2.5rem] rounded-none border-[0.5px] border-border/50 !outline-none px-4 py-2 hover:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0',
                 isActive
-                  ? 'bg-background text-foreground'
+                  ? 'bg-lime-200 text-foreground'
                   : 'bg-muted/50 text-muted-foreground',
                 isFirst && 'rounded-l-sm',
                 isLast && 'rounded-r-sm',

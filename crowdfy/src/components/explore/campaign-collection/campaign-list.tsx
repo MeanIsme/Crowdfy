@@ -18,7 +18,7 @@ export function CampaignList({ campaigns, layout }: CampaignListProps) {
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
       {campaigns.map((campaign) => (
         <CampaignCard key={campaign.id} campaign={campaign} layout="gallery" />
       ))}

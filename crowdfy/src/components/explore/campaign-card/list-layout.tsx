@@ -79,9 +79,9 @@ export function ListLayout({ campaign, isFavorite, onToggleFavorite }: ListLayou
 
         {/* Progress Bar */}
         <div className="mt-2">
-          <div className="relative h-1 w-full overflow-hidden rounded-full bg-green-100 dark:bg-green-900/30">
+          <div className="relative h-1 w-full overflow-hidden rounded-full bg-lime-100 dark:bg-lime-900/30">
             <div
-              className="h-full bg-green-500 transition-all dark:bg-green-400"
+              className="h-full bg-lime-500 transition-all dark:bg-lime-400"
               style={{ width: `${percentage}%` }}
             />
           </div>

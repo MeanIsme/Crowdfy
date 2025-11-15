@@ -32,7 +32,7 @@ export function HeaderViewToggle() {
           <ToggleGroupItem
             key={option.value}
             value={option.value}
-            className="border-0 rounded-sm px-4 py-2 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+            className="border-0 rounded-sm px-4 py-2 data-[state=on]:bg-lime-200 data-[state=on]:text-foreground"
             aria-label={`Switch to ${option.label} view`}
           >
             <Icon className="mr-2 h-4 w-4" aria-hidden="true" />
