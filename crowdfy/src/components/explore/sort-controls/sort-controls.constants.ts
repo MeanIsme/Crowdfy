@@ -1,9 +1,8 @@
 import type { SortKey } from '@/store/explore-store'
 
-export const SORT_LABELS: Record<SortKey, string> = {
+export const SORT_LABELS: Record<Exclude<SortKey, null>, string> = {
   price: 'Price',
   date: 'Date',
-  null: '',
 }
 
 export const SORT_KEYS: SortKey[] = ['price', 'date']
