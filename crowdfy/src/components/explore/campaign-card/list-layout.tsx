@@ -21,10 +21,11 @@ export const ListLayout = React.memo(function ListLayout({ campaign, isFavorite,
     <article className="group relative flex overflow-hidden rounded-sm border border-foreground/20 bg-card shadow-sm transition hover:shadow-md">
       {/* Left: Image Section */}
       <div className="relative m-4 aspect-[200/186] w-32 shrink-0 overflow-hidden rounded-sm md:w-40">
-        <Image
+        <img
           src={campaign.image}
           alt={campaign.title}
-          className="h-full w-full rounded-l-sm object-cover object-center"
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          loading="lazy"
         />
         {/* Verified Badge */}
         {campaign.creator.verified && (
